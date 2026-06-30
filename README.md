@@ -21,7 +21,7 @@ This skill turns those scattered updates into a research-ready workflow:
 
 The goal is to become the most comprehensive first-hand heritage news source map for cultural heritage, natural heritage, living heritage, museums, archaeology, conservation, and World Heritage governance.
 
-It does not cite WeChat or secondary digests as news sources. Local WeChat article archives are used only as calibration samples to discover source gaps and improve editorial judgment. User-facing outputs should show original publishers only: UNESCO, IUCN, ICOMOS, ICOM, ICCROM, national agencies, wire services, regional media, specialist heritage sources, and other first-hand institutions.
+It does not cite WeChat or secondary digests as news sources. User-facing outputs should show original publishers only: UNESCO, IUCN, ICOMOS, ICOM, ICCROM, national agencies, wire services, regional media, specialist heritage sources, and other first-hand institutions.
 
 ## Current Capabilities
 
