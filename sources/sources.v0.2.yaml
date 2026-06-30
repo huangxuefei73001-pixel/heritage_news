@@ -1,0 +1,1413 @@
+sources:
+- id: unesco-whc-news
+  name: UNESCO World Heritage Centre - News
+  url: https://whc.unesco.org/en/news/
+  feed_url: https://whc.unesco.org/en/news/rss/
+  type: rss
+  language: en
+  region: international
+  category: international_org
+  notes: UNESCO WHC 英文新闻 RSS，每次 10 条最新
+  status: active
+  priority: high
+  scope: institutional_news
+- id: unesco-whc-list
+  name: UNESCO World Heritage Centre - New Inscriptions
+  url: https://whc.unesco.org/en/newproperties/
+  feed_url: https://whc.unesco.org/en/newproperties/rss/
+  type: rss
+  language: en
+  region: international
+  category: international_org
+  notes: 403 Forbidden，feed 已失效
+  status: broken
+  priority: high
+  scope: institutional_news
+- id: unesco-whc-fr
+  name: UNESCO Centre du patrimoine mondial - Actualités
+  url: https://whc.unesco.org/fr/actualites/
+  feed_url: https://whc.unesco.org/fr/actualites/rss/
+  type: rss
+  language: fr
+  region: international
+  category: international_org
+  notes: UNESCO WHC 法文新闻 RSS，每次 10 条最新
+  status: active
+  priority: high
+  scope: institutional_news
+- id: unesco-news-global
+  name: UNESCO Global News
+  url: https://www.unesco.org/en/news
+  feed_url: https://www.unesco.org/en/news/rss
+  type: rss
+  language: en
+  region: international
+  category: international_org
+  notes: RSS 404，路径可能已变更
+  status: broken
+  priority: high
+  scope: institutional_news
+- id: unesco-courier
+  name: The UNESCO Courier
+  url: https://courier.unesco.org/en
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: international_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: icomos-news
+  name: ICOMOS International - News
+  url: https://www.icomos.org/en/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: international_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS — ICOMOS 主站
+  priority: high
+  scope: institutional_news
+- id: icomos-fr
+  name: ICOMOS France - Actualités
+  url: https://www.icomosfrance.fr/
+  feed_url: https://icomosfrance.fr/feed
+  type: webpage
+  language: fr
+  region: europe
+  category: international_org
+  status: active
+  notes: ICOMOS France 新闻 RSS，每次 10 条最新
+  priority: high
+  scope: institutional_news
+- id: iccrom-news
+  name: ICCROM - News
+  url: https://www.iccrom.org/news
+  feed_url: https://www.iccrom.org/feed
+  type: webpage
+  language: en
+  region: international
+  category: international_org
+  status: active
+  notes: ICCROM 新闻 RSS，每次 10 条最新
+  priority: high
+  scope: institutional_news
+- id: icom-news
+  name: ICOM - News
+  url: https://icom.museum/en/news/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: international_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS — ICOM 主站
+  priority: high
+  scope: institutional_news
+- id: icom-fr
+  name: ICOM - Actualités
+  url: https://icom.museum/fr/actualites/
+  feed_url: null
+  type: webpage
+  language: fr
+  region: international
+  category: international_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: icomos-open-archive
+  name: ICOMOS Open Archive
+  url: https://openarchive.icomos.org/
+  feed_url: https://openarchive.icomos.org/cgi/exportview/year/RSS2/year.xml
+  type: rss
+  language: en
+  region: international
+  category: academic
+  notes: RSS feed 返回 0 条目。URL 可能已变更。2026-06-04 验证时无内容。
+  status: broken
+  priority: medium
+  scope: academic
+- id: iucn-world-heritage
+  name: IUCN World Heritage
+  url: https://www.iucn.org/theme/world-heritage
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: international_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS — IUCN World Heritage
+  priority: high
+  scope: institutional_news
+- id: unesco-intangible
+  name: UNESCO Intangible Cultural Heritage
+  url: https://ich.unesco.org/en/news
+  feed_url: https://ich.unesco.org/cron_rss.php?flux-rss=news&lang=en
+  type: rss
+  language: en
+  region: international
+  category: international_org
+  notes: ⚠️ 全量归档（622 条，非新闻）— UNESCO 非遗英文全部历史记录。保留但检索时注意噪声。
+  status: active
+  priority: high
+  scope: institutional_news
+- id: unesco-ich-fr
+  name: UNESCO Patrimoine culturel immatériel
+  url: https://ich.unesco.org/fr/actualites
+  feed_url: https://ich.unesco.org/cron_rss.php?flux-rss=news&lang=fr
+  type: rss
+  language: fr
+  region: international
+  category: international_org
+  status: active
+  notes: ⚠️ 全量归档（622 条，非新闻）— UNESCO 非遗法文全部历史记录。保留但检索时注意噪声。
+  priority: high
+  scope: institutional_news
+- id: icom-icomos-doc
+  name: ICOM-ICOMOS Documentation Centre
+  url: https://www.icom-icomos-doc.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: academic
+  status: broken
+  notes: connection_refused
+  priority: medium
+  scope: academic
+- id: europa-nostra
+  name: Europa Nostra
+  url: https://www.europanostra.org/
+  feed_url: https://www.europanostra.org/feed/
+  type: webpage
+  language: en
+  region: europe
+  category: regional_org
+  status: active
+  notes: Europa Nostra 新闻 RSS，每次 10 条最新
+  priority: high
+  scope: institutional_news
+- id: coe-culture-heritage
+  name: Council of Europe - Culture and Heritage
+  url: https://www.coe.int/en/web/culture-and-heritage
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: regional_org
+  status: active_no_feed
+  notes: CoE 页面 JS 渲染，需 RSSHub
+  priority: high
+  scope: institutional_news
+- id: coe-herein
+  name: HEREIN - European Heritage Policies
+  url: https://www.coe.int/en/web/herein-system
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: regional_org
+  status: broken
+  notes: 页面空返回。HEREIN 是政策数据库而非新闻源。Phase 2 评估 RSSHub 可行性。
+  priority: high
+  scope: heritage_policy
+- id: encatc
+  name: ENCATC - European Network on Cultural Management and Policy
+  url: https://www.encatc.org/en/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: european-heritage-hub
+  name: European Heritage Hub
+  url: https://www.europeanheritagehub.eu/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: regional_org
+  status: active_no_feed
+  notes: 页面 JS 渲染或墙
+  priority: high
+  scope: institutional_news
+- id: heritage-europe
+  name: Heritage Europe / EAHTR
+  url: https://www.historic-towns.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: regional_org
+  status: active_no_feed
+  notes: timeout，可能需 RSSHub
+  priority: high
+  scope: institutional_news
+- id: seameo-spafa
+  name: SEAMEO SPAFA
+  url: https://www.seameo-spafa.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: timeout，可能需 RSSHub
+  priority: high
+  scope: institutional_news
+- id: asean-heritage-parks
+  name: ASEAN Heritage Parks
+  url: https://asean.org/our-communities/environment/asean-heritage-parks/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: accu-nara
+  name: ACCU Nara - Cultural Heritage Protection
+  url: https://www.nara.accu.or.jp/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: ichcap
+  name: ICHCAP - Intangible Cultural Heritage Centre for Asia-Pacific
+  url: https://www.unesco-ichcap.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: icomos-china
+  name: ICOMOS China / 中国古迹遗址保护协会
+  url: https://www.icomoschina.org.cn/
+  feed_url: null
+  type: webpage
+  language: zh
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: connection_refused（从 Mac），可能需从北京服务器
+  priority: high
+  scope: institutional_news
+- id: icomos-japan
+  name: ICOMOS Japan / 日本イコモス
+  url: https://icomosjapan.org/
+  feed_url: null
+  type: webpage
+  language: ja
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: icomos-korea
+  name: ICOMOS Korea / 한국이코모스
+  url: https://www.icomos-korea.or.kr/
+  feed_url: null
+  type: webpage
+  language: ko
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: icomos-india
+  name: ICOMOS India
+  url: https://icomosindia.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: institutional_news
+- id: iccrom-collasia
+  name: ICCROM CollAsia
+  url: https://www.iccrom.org/places/asia-pacific
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: 页面空返回
+  priority: high
+  scope: institutional_news
+- id: icomos-thailand
+  name: ICOMOS Thailand
+  url: https://www.icomosthai.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: icomos-philippines
+  name: ICOMOS Philippines
+  url: https://icomosphilippines.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: regional_org
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: institutional_news
+- id: african-world-heritage-fund
+  name: African World Heritage Fund (AWHF)
+  url: https://awhf.net/
+  feed_url: https://awhf.net/news/feed/
+  type: rss
+  language: en
+  region: africa
+  category: regional_org
+  notes: timeout，已知有官网但抓取失败
+  status: active_no_feed
+  priority: high
+  scope: institutional_news
+- id: iccrom-athar
+  name: ICCROM-ATHAR
+  url: https://www.iccrom.org/places/arab-region
+  feed_url: null
+  type: webpage
+  language: en
+  region: arab_states
+  category: regional_org
+  status: active_no_feed
+  notes: 页面空返回
+  priority: high
+  scope: institutional_news
+- id: arc-wh
+  name: ARC-WH - Arab Regional Centre for World Heritage
+  url: https://www.arcwh.org/
+  feed_url: https://www.arcwh.org/feed/
+  type: webpage
+  language: en
+  region: arab_states
+  category: regional_org
+  status: active
+  notes: 阿拉伯世界遗产区域中心新闻 RSS，每次 10 条最新
+  priority: high
+  scope: institutional_news
+- id: africom
+  name: AFRICOM - International Council of African Museums
+  url: https://www.africom.museum/
+  feed_url: null
+  type: webpage
+  language: en
+  region: africa
+  category: regional_org
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: institutional_news
+- id: school-of-african-heritage
+  name: Ecole du Patrimoine Africain / School of African Heritage
+  url: https://www.epa-prema.net/
+  feed_url: https://www.epa-prema.net/feed/
+  type: webpage
+  language: fr
+  region: africa
+  category: regional_org
+  status: active
+  notes: 非洲遗产学院 RSS（法文），每次 10 条最新
+  priority: high
+  scope: institutional_news
+- id: chtl-africa
+  name: Centre for Heritage Technologies and Learning (CHTL Africa)
+  url: https://chtlafrica.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: africa
+  category: regional_org
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: institutional_news
+- id: icomos-lac
+  name: ICOMOS Latin America and Caribbean
+  url: https://icomoslac.org/
+  feed_url: null
+  type: webpage
+  language: es
+  region: latin_america_caribbean
+  category: regional_org
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: institutional_news
+- id: ilam
+  name: ILAM - Instituto Latinoamericano de Museos
+  url: https://www.ilam.org/
+  feed_url: https://ilam.org/feed/
+  type: webpage
+  language: es
+  region: latin_america_caribbean
+  category: regional_org
+  status: active
+  notes: 拉丁美洲博物馆协会 RSS（西班牙文），每次 10 条最新
+  priority: high
+  scope: institutional_news
+- id: caribbean-heritage
+  name: Caribbean Heritage Network
+  url: https://caribbeanheritagenetwork.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: latin_america_caribbean
+  category: regional_org
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: institutional_news
+- id: unesco-montevideo
+  name: UNESCO Montevideo - Culture
+  url: https://www.unesco.org/es/fieldoffice/montevideo/culture
+  feed_url: null
+  type: webpage
+  language: es
+  region: latin_america_caribbean
+  category: regional_org
+  status: active_no_feed
+  notes: 页面空返回
+  priority: high
+  scope: institutional_news
+- id: unesco-doha
+  name: UNESCO Doha - Culture
+  url: https://www.unesco.org/en/fieldoffice/doha/culture
+  feed_url: null
+  type: webpage
+  language: en
+  region: arab_states
+  category: regional_org
+  status: active_no_feed
+  notes: 页面空返回
+  priority: high
+  scope: institutional_news
+- id: unesco-cairo
+  name: UNESCO Cairo - Culture
+  url: https://www.unesco.org/en/fieldoffice/cairo/culture
+  feed_url: null
+  type: webpage
+  language: en
+  region: arab_states
+  category: regional_org
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: ncbh-jordan
+  name: National Centre for Built Heritage (Jordan)
+  url: https://www.ncbh.gov.jo/
+  feed_url: null
+  type: webpage
+  language: ar
+  region: arab_states
+  category: national_body
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: heritage_policy
+- id: historic-england
+  name: Historic England
+  url: https://historicengland.org.uk/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面空返回，需 RSSHub
+  priority: high
+  scope: heritage_policy
+- id: english-heritage
+  name: English Heritage
+  url: https://www.english-heritage.org.uk/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: historic-environment-scotland
+  name: Historic Environment Scotland
+  url: https://www.historicenvironment.scot/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: cadw
+  name: Cadw - Welsh Historic Environment
+  url: https://cadw.gov.wales/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: heritage-ireland
+  name: Heritage Ireland
+  url: https://heritageireland.ie/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: ministere-culture-fr
+  name: Ministère de la Culture (France)
+  url: https://www.culture.gouv.fr/
+  feed_url: null
+  type: webpage
+  language: fr
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: soprintendenze-italia
+  name: Ministero della Cultura (Italia) - Patrimonio
+  url: https://cultura.gov.it/
+  feed_url: null
+  type: webpage
+  language: it
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: rijksdienst-nl
+  name: Rijksdienst voor het Cultureel Erfgoed (Netherlands)
+  url: https://www.cultureelerfgoed.nl/
+  feed_url: null
+  type: webpage
+  language: nl
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: bda-de
+  name: Deutsche Stiftung Denkmalschutz
+  url: https://www.denkmalschutz.de/
+  feed_url: null
+  type: webpage
+  language: de
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: raa-se
+  name: Riksantikvarieämbetet (Sweden)
+  url: https://www.raa.se/
+  feed_url: null
+  type: webpage
+  language: sv
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: riksantikvaren-no
+  name: Riksantikvaren (Norway)
+  url: https://www.riksantikvaren.no/
+  feed_url: null
+  type: webpage
+  language: 'no'
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: museovirasto-fi
+  name: Museovirasto (Finland)
+  url: https://www.museovirasto.fi/
+  feed_url: null
+  type: webpage
+  language: fi
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: iphan-br
+  name: IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional (Brazil)
+  url: https://www.gov.br/iphan/
+  feed_url: null
+  type: webpage
+  language: pt
+  region: latin_america_caribbean
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: inah-mx
+  name: INAH - Instituto Nacional de Antropología e Historia (Mexico)
+  url: https://www.inah.gob.mx/
+  feed_url: https://www.inah.gob.mx/?format=feed&type=rss
+  type: webpage
+  language: es
+  region: latin_america_caribbean
+  category: national_body
+  status: active
+  notes: 墨西哥 INAH RSS，每次少量条目
+  priority: high
+  scope: heritage_policy
+- id: ministerio-cultura-pe
+  name: Ministerio de Cultura (Perú) - Patrimonio
+  url: https://www.gob.pe/cultura
+  feed_url: null
+  type: webpage
+  language: es
+  region: latin_america_caribbean
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: ministerio-cultura-co
+  name: Ministerio de Cultura (Colombia) - Patrimonio
+  url: https://www.mincultura.gov.co/
+  feed_url: null
+  type: webpage
+  language: es
+  region: latin_america_caribbean
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: ncha-cn
+  name: 国家文物局 (National Cultural Heritage Administration, China)
+  url: https://www.ncha.gov.cn/
+  feed_url: null
+  type: webpage
+  language: zh
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: connection_refused（从 Mac），可能需从北京服务器
+  priority: high
+  scope: heritage_policy
+- id: icomos-china-news
+  name: 中国古迹遗址保护协会 (ICOMOS China) - 新闻
+  url: https://www.icomoschina.org.cn/news
+  feed_url: null
+  type: webpage
+  language: zh
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: ICOMOS China 子站，与 icomos-china 重复
+  priority: high
+  scope: heritage_policy
+- id: cha-hk
+  name: 古物咨询委员会 / Antiquities Advisory Board (Hong Kong)
+  url: https://www.aab.gov.hk/
+  feed_url: null
+  type: webpage
+  language: zh
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: amo-hk
+  name: 古物古迹办事处 / Antiquities and Monuments Office (Hong Kong)
+  url: https://www.amo.gov.hk/
+  feed_url: null
+  type: webpage
+  language: zh
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: bunka-jp
+  name: 文化庁 (Agency for Cultural Affairs, Japan)
+  url: https://www.bunka.go.jp/
+  feed_url: null
+  type: webpage
+  language: ja
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: bunka-isan-jp
+  name: 日本文化遺産オンライン (Japan Cultural Heritage Online)
+  url: https://bunka.nii.ac.jp/
+  feed_url: null
+  type: webpage
+  language: ja
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: cha-kr
+  name: 문화재청 (Cultural Heritage Administration, Korea)
+  url: https://www.cha.go.kr/
+  feed_url: null
+  type: webpage
+  language: ko
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: asi-india
+  name: Archaeological Survey of India (ASI)
+  url: https://asi.nic.in/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: nhb-sg
+  name: National Heritage Board (Singapore)
+  url: https://www.nhb.gov.sg/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面空返回
+  priority: high
+  scope: heritage_policy
+- id: jwn-malaysia
+  name: Jabatan Warisan Negara (Malaysia)
+  url: https://www.heritage.gov.my/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: fine-arts-thailand
+  name: กรมศิลปากร (Fine Arts Department, Thailand)
+  url: https://www.finearts.go.th/
+  feed_url: null
+  type: webpage
+  language: th
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: ncca-ph
+  name: National Commission for Culture and the Arts (Philippines)
+  url: https://ncca.gov.ph/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面空返回
+  priority: high
+  scope: heritage_policy
+- id: kemenbud-ri
+  name: Kementerian Kebudayaan (Indonesia)
+  url: https://kebudayaan.kemdikbud.go.id/
+  feed_url: null
+  type: webpage
+  language: id
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: connection_refused — 印尼文化部
+  priority: high
+  scope: heritage_policy
+- id: nps-usa
+  name: National Park Service (USA) - Cultural Resources
+  url: https://www.nps.gov/subjects/culturallandscapes/index.htm
+  feed_url: null
+  type: webpage
+  language: en
+  region: north_america
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: parks-canada
+  name: Parks Canada - Heritage
+  url: https://parks.canada.ca/
+  feed_url: null
+  type: webpage
+  language: en
+  region: north_america
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: inah-es
+  name: Patrimonio Nacional (Spain)
+  url: https://www.patrimonionacional.es/
+  feed_url: null
+  type: webpage
+  language: es
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 西班牙 Patrimonio Nacional，页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: dgpc-pt
+  name: DGPC - Direção-Geral do Património Cultural (Portugal)
+  url: https://www.patrimoniocultural.gov.pt/
+  feed_url: null
+  type: webpage
+  language: pt
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面空返回
+  priority: high
+  scope: heritage_policy
+- id: antiquities-egypt
+  name: Ministry of Tourism and Antiquities (Egypt)
+  url: https://mota.gov.eg/
+  feed_url: null
+  type: webpage
+  language: ar
+  region: arab_states
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: heritage-turkey
+  name: Kültür Varlıkları ve Müzeler Genel Müdürlüğü (Turkey)
+  url: https://kvmgm.ktb.gov.tr/
+  feed_url: null
+  type: webpage
+  language: tr
+  region: europe
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: sahra-south-africa
+  name: SAHRA - South African Heritage Resources Agency
+  url: https://www.sahra.org.za/
+  feed_url: https://www.sahra.org.za/feed/
+  type: webpage
+  language: en
+  region: africa
+  category: national_body
+  status: active
+  notes: 南非遗产资源局 RSS，每次约 5 条
+  priority: high
+  scope: heritage_policy
+- id: nmk-kenya
+  name: National Museums of Kenya
+  url: https://www.museums.or.ke/
+  feed_url: https://museums.or.ke/feed/
+  type: webpage
+  language: en
+  region: africa
+  category: national_body
+  status: active
+  notes: 肯尼亚国家博物馆 RSS，每次 10 条最新
+  priority: high
+  scope: heritage_policy
+- id: ncmm-nigeria
+  name: National Commission for Museums and Monuments (Nigeria)
+  url: https://nationalcommissionformuseumsandmonuments.gov.ng/
+  feed_url: null
+  type: webpage
+  language: en
+  region: africa
+  category: national_body
+  status: active_no_feed
+  notes: connection_refused
+  priority: high
+  scope: heritage_policy
+- id: heritage-nz
+  name: Heritage New Zealand Pouhere Taonga
+  url: https://www.heritage.org.nz/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: heritage_policy
+- id: dahc-au
+  name: Department of Climate Change, Energy, the Environment and Water (Australia)
+    - Heritage
+  url: https://www.dcceew.gov.au/parks-heritage/heritage
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: national_body
+  status: active_no_feed
+  notes: HTTP stream reset — 澳洲联邦遗产
+  priority: high
+  scope: heritage_policy
+- id: world-monuments-fund
+  name: World Monuments Fund
+  url: https://www.wmf.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: foundation
+  status: active_no_feed
+  notes: 页面可访问，无 RSS — World Monuments Fund
+  priority: high
+  scope: institutional_news
+- id: getty-conservation
+  name: Getty Conservation Institute
+  url: https://www.getty.edu/conservation/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: foundation
+  status: active_no_feed
+  notes: 页面可访问，无 RSS — Getty Conservation Institute
+  priority: high
+  scope: institutional_news
+- id: aga-khan-trust
+  name: Aga Khan Trust for Culture
+  url: https://akdn.org/our-agencies/aga-khan-trust-culture/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: foundation
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: global-heritage-fund
+  name: Global Heritage Fund
+  url: https://globalheritagefund.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: foundation
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: heritage-fund-uk
+  name: The National Lottery Heritage Fund (UK)
+  url: https://www.heritagefund.org.uk/
+  feed_url: http://www.heritagefund.org.uk/rss-feeds-by-term/news+blogs+story+video.xml
+  type: webpage
+  language: en
+  region: europe
+  category: foundation
+  status: broken
+  notes: RSS feed 返回 0 条目。The National Lottery Heritage Fund 的 RSS 地址可能已变更。
+  priority: high
+  scope: institutional_news
+- id: architectural-heritage-fund-uk
+  name: Architectural Heritage Fund (UK)
+  url: https://ahfund.org.uk/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: foundation
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: prince-claus-fund
+  name: Prince Claus Fund - Culture
+  url: https://princeclausfund.org/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: foundation
+  status: active_no_feed
+  notes: 页面可访问，无 RSS
+  priority: high
+  scope: institutional_news
+- id: ijhs
+  name: International Journal of Heritage Studies
+  url: https://www.tandfonline.com/toc/rjhs20/current
+  feed_url: https://www.tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=rjhs20
+  type: rss
+  language: en
+  region: international
+  category: academic
+  notes: IJHS 期刊 RSS，最新论文（非新闻，学术文献）
+  status: active
+  priority: medium
+  scope: academic
+- id: journal-cultural-heritage
+  name: Journal of Cultural Heritage
+  url: https://www.sciencedirect.com/journal/journal-of-cultural-heritage
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: academic
+  status: active_no_feed
+  notes: ScienceDirect JS 渲染
+  priority: medium
+  scope: academic
+- id: heritage-society
+  name: Heritage & Society
+  url: https://www.tandfonline.com/toc/yhso20/current
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: academic
+  status: active_no_feed
+  notes: T&F Online 空返回
+  priority: medium
+  scope: academic
+- id: built-heritage
+  name: Built Heritage
+  url: https://built-heritage.springeropen.com/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: academic
+  status: active_no_feed
+  notes: 页面可访问，无 RSS — Springer Open 期刊
+  priority: medium
+  scope: academic
+- id: heritage-science
+  name: Heritage Science
+  url: https://heritagesciencejournal.springeropen.com/
+  feed_url: https://www.nature.com/npjheritagesci.rss
+  type: webpage
+  language: en
+  region: international
+  category: academic
+  status: active
+  notes: Heritage Science (Nature) RSS，每次约 8 条最新论文
+  priority: medium
+  scope: academic
+- id: jiah
+  name: Journal of the Institute of Archaeology and Cultural Heritage (中国)
+  url: https://www.icomoschina.org.cn/publication
+  feed_url: null
+  type: webpage
+  language: zh
+  region: asia_pacific
+  category: academic
+  status: active_no_feed
+  notes: connection_refused（从 Mac），中国期刊
+  priority: medium
+  scope: academic
+- id: spafa-journal
+  name: SPAFA Journal
+  url: https://www.seameo-spafa.org/journal/
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: academic
+  status: active_no_feed
+  notes: timeout
+  priority: medium
+  scope: academic
+- id: jsaah
+  name: Journal of the Society of Architectural Historians
+  url: https://jsah.ucpress.edu/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: academic
+  status: active_no_feed
+  notes: connection_refused — UC Press
+  priority: medium
+  scope: academic
+- id: apt-bulletin
+  name: APT Bulletin - The Journal of Preservation Technology
+  url: https://www.apti.org/apt-bulletin
+  feed_url: https://www.apti.org/feed/rss2
+  type: webpage
+  language: en
+  region: international
+  category: academic
+  status: active
+  notes: APT 保护技术期刊 RSS，每次约 8 条
+  priority: medium
+  scope: academic
+- id: art-newspaper-heritage
+  name: The Art Newspaper - Heritage
+  url: https://www.theartnewspaper.com/topics/heritage
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: media
+  status: active_no_feed
+  notes: '页面空返回 — The Art Newspaper Heritage; v0.2: broad art/culture media; keep
+    as supporting context, not a default policy/institution source'
+  priority: low
+  scope: media_general
+- id: art-newspaper-fr
+  name: Le Journal des Arts
+  url: https://www.lejournaldesarts.fr/
+  feed_url: null
+  type: webpage
+  language: fr
+  region: europe
+  category: media
+  status: active_no_feed
+  notes: 'Le Journal des Arts，页面可访问，无 RSS; v0.2: broad art/culture media; keep as
+    supporting context, not a default policy/institution source'
+  priority: low
+  scope: media_general
+- id: hyperallergic
+  name: Hyperallergic
+  url: https://hyperallergic.com/
+  feed_url: https://hyperallergic.com/feed/
+  type: rss
+  language: en
+  region: international
+  category: media
+  notes: 'Hyperallergic RSS，每次 15 条。独立艺术文化媒体，保留。; v0.2: broad art/culture media; keep
+    as supporting context, not a default policy/institution source'
+  status: active
+  priority: low
+  scope: media_general
+- id: apollo-magazine
+  name: Apollo Magazine
+  url: https://www.apollo-magazine.com/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: media
+  status: active_no_feed
+  notes: '页面可访问，无 RSS; v0.2: broad art/culture media; keep as supporting context,
+    not a default policy/institution source'
+  priority: low
+  scope: media_general
+- id: smithsonian-mag-heritage
+  name: Smithsonian Magazine - Heritage
+  url: https://www.smithsonianmag.com/category/heritage/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: media
+  status: active_no_feed
+  notes: '页面空返回; v0.2: broad art/culture media; keep as supporting context, not a
+    default policy/institution source'
+  priority: low
+  scope: media_general
+- id: archdaily-heritage
+  name: ArchDaily - Heritage
+  url: https://www.archdaily.com/search/projects/categories/heritage
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: media
+  status: active_no_feed
+  notes: '页面可访问，无 RSS; v0.2: broad art/culture media; keep as supporting context,
+    not a default policy/institution source'
+  priority: low
+  scope: media_general
+- id: the-guardian-heritage
+  name: The Guardian - Heritage
+  url: https://www.theguardian.com/culture/heritage
+  feed_url: https://www.theguardian.com/culture/heritage/rss
+  type: rss
+  language: en
+  region: international
+  category: media
+  status: active
+  notes: 'The Guardian Heritage 专栏 RSS，每次 20 条。泛媒体但遗产专题，保留。; v0.2: broad art/culture
+    media; keep as supporting context, not a default policy/institution source'
+  priority: low
+  scope: media_general
+- id: bbc-culture
+  name: BBC Culture
+  url: https://www.bbc.com/culture
+  feed_url: https://feeds.bbci.co.uk/culture/rss.xml
+  type: rss
+  language: en
+  region: international
+  category: media
+  status: broken
+  notes: 'RSS 404。BBC Culture 覆盖范围太广，非遗产专类。Phase 2 重新评估。; v0.2: broad art/culture
+    media; keep as supporting context, not a default policy/institution source'
+  priority: low
+  scope: media_general
+- id: chinadaily-heritage
+  name: China Daily - Heritage
+  url: https://www.chinadaily.com.cn/china/cultureheritagetourism
+  feed_url: null
+  type: webpage
+  language: en
+  region: asia_pacific
+  category: media
+  status: active_no_feed
+  notes: '页面空返回; v0.2: broad art/culture media; keep as supporting context, not a
+    default policy/institution source'
+  priority: low
+  scope: media_general
+- id: xinhua-culture
+  name: 新华网 - 文化遗产
+  url: https://www.news.cn/culture/
+  feed_url: null
+  type: webpage
+  language: zh
+  region: asia_pacific
+  category: media
+  status: active_no_feed
+  notes: '页面可访问，无 RSS; v0.2: broad art/culture media; keep as supporting context,
+    not a default policy/institution source'
+  priority: low
+  scope: media_general
+- id: al-jazeera-culture
+  name: Al Jazeera - Culture
+  url: https://www.aljazeera.com/tag/culture/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: media
+  status: active_no_feed
+  notes: '页面空返回; v0.2: broad art/culture media; keep as supporting context, not a
+    default policy/institution source'
+  priority: low
+  scope: media_general
+- id: heritage-tribune
+  name: Heritage Tribune
+  url: https://heritagetribune.eu/
+  feed_url: null
+  type: webpage
+  language: en
+  region: europe
+  category: blog
+  status: active_no_feed
+  notes: connection_refused
+  priority: medium
+  scope: other
+- id: heritage-matters
+  name: Heritage Matters (Substack)
+  url: https://heritagematters.substack.com/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: blog
+  status: active_no_feed
+  notes: Substack 页面可访问
+  priority: medium
+  scope: other
+- id: preserving-the-past
+  name: Preserving the Past
+  url: https://preservingthepast.substack.com/
+  feed_url: null
+  type: webpage
+  language: en
+  region: international
+  category: blog
+  status: active_no_feed
+  notes: Substack 页面空返回
+  priority: medium
+  scope: other
+metadata:
+  version: '0.2'
+  last_updated: 2026-06-05 14:28
+  total_sources: 115
+  by_status:
+    active: 18
+    rsshub: 90
+    broken: 5
+    skip: 2
+  source_count: 115
+  status_rules:
+    active: fetchable now; must have a working feed_url
+    active_no_feed: reachable but not fetchable by the current RSS pipeline
+    needs_verification: access or feed state is unresolved
+    broken: confirmed unusable for now
+  priority_rules:
+    high: policy, institutional, funding, listing, or professional heritage sources
+    medium: academic or specialist sources useful for research context
+    low: broad art/culture media used only as supporting context by default
+  generated_from: /Users/pauline/Documents/heritage-news-skill/sources/sources.yaml
