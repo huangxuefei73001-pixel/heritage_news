@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+data/*.db
+data/*.sqlite
+rsshub-local/node_modules/
+*.log
