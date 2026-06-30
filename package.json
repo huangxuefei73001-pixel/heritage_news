@@ -1,0 +1,16 @@
+{
+  "name": "heritage-news-skill-v0.2",
+  "version": "1.0.0",
+  "description": "This directory is a non-destructive v0.2 overlay for the original project at:",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
