@@ -1,0 +1,861 @@
+metadata:
+  version: '0.3'
+  generated_from: 国际遗产观察 and 世遗雷达 WeChat article source analysis
+  excluded_tiers:
+  - low_priority_aggregator
+sources:
+- name: UNESCO World Heritage Centre
+  id: UNESCO
+  url: https://whc.unesco.org/en/news/
+  rss_url: https://whc.unesco.org/en/news/rss/
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 24
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Official World Heritage source.
+- name: UNESCO Intangible Cultural Heritage
+  id: UNESCO_ICH
+  url: https://ich.unesco.org/en/news
+  rss_url: https://ich.unesco.org/cron_rss.php?flux-rss=news&lang=en
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 3
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Official ICH source.
+- name: IUCN
+  id: IUCN
+  url: https://www.iucn.org/news-events
+  rss_url: null
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 49
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: 'High-signal natural heritage source. v0.3 RSS check: No parsable RSS discovered
+    on public pages; v0.3 uses official news-events page with source-specific web extraction.'
+  rss_status: no_public_rss
+- name: ICOMOS
+  id: ICOMOS
+  url: https://www.icomos.org/news/
+  rss_url: null
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 16
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: 'Official ICOMOS site; web extraction only in v0.3. v0.3 RSS check: No parsable
+    RSS discovered; v0.3 uses official /news/ page with source-specific web extraction.'
+  rss_status: no_public_rss
+- name: ICCROM
+  id: ICCROM
+  url: https://www.iccrom.org/news
+  rss_url: https://www.iccrom.org/feed
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 6
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Official conservation source.
+- name: ICOM
+  id: ICOM
+  url: https://icom.museum/en/news/
+  rss_url: null
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 17
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: 'Museum sector official source. v0.3 RSS check: /en/feed/ exists but returned
+    0 items; v0.3 uses official news page with source-specific web extraction.'
+  rss_status: empty_rss
+- name: Europa Nostra
+  id: EuropaNostra
+  url: https://www.europanostra.org/
+  rss_url: https://www.europanostra.org/feed/
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: europe
+  wechat_evidence_count: 9
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: European heritage organization.
+- name: 国家文物局
+  id: NCHA
+  url: http://www.ncha.gov.cn/
+  rss_url: null
+  source_tier: core_official
+  trust_level: high
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 44
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: 'China national heritage authority. v0.3 RSS check: Public RSS not discovered;
+    local HTTPS tests failed/returned no feed; v0.3 uses official HTTP homepage with source-specific web extraction.'
+  rss_status: no_public_rss
+- name: 国家林草局
+  id: NFGA
+  url: https://www.forestry.gov.cn/
+  rss_url: null
+  source_tier: core_official
+  trust_level: high
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 17
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: 'China natural heritage authority. v0.3 RSS check: Common RSS URLs returned
+    404; v0.3 uses official homepage with source-specific web extraction.'
+  rss_status: no_public_rss
+- name: Historic England
+  id: HistoricEngland
+  url: https://historicengland.org.uk/whats-new/news/
+  rss_url: null
+  source_tier: specialist_media
+  trust_level: high
+  language: en
+  country_or_region: uk
+  wechat_evidence_count: 4
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Official/specialist UK heritage source.
+- name: English Heritage
+  id: EnglishHeritage
+  url: https://www.english-heritage.org.uk/about/contact-us-and-faqs/press-office/
+  rss_url: null
+  source_tier: specialist_media
+  trust_level: high
+  language: en
+  country_or_region: uk
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: UK heritage site operator; v0.3 uses official press-office page with source-specific web extraction.
+- name: Xinhua
+  id: Xinhua
+  url: https://www.news.cn/culture/
+  rss_url: null
+  source_tier: wire_media
+  trust_level: high
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 77
+  fetch_method: web
+  update_frequency: hourly
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: 'RSS must be verified; high WeChat evidence. v0.3 RSS check: Common culture/news
+    RSS URLs returned 404; v0.3 uses official culture page with source-specific web extraction.'
+  rss_status: no_public_rss
+- name: China Daily
+  id: ChinaDaily
+  url: https://www.chinadaily.com.cn/culture/
+  rss_url: null
+  source_tier: wire_media
+  trust_level: high
+  language: en
+  country_or_region: china
+  wechat_evidence_count: 23
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: China English-language wire/media source; v0.3 uses official culture page with heritage-term filtering.
+- name: 中国新闻网
+  id: Chinanews
+  url: https://www.chinanews.com.cn/cul/
+  rss_url: null
+  source_tier: wire_media
+  trust_level: high
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 42
+  fetch_method: web
+  update_frequency: hourly
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: High WeChat evidence; verify feed/route.
+- name: Reuters Heritage
+  id: Reuters
+  url: https://www.reuters.com/
+  rss_url: http://127.0.0.1:1200/reuters/world
+  source_tier: wire_media
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 8
+  fetch_method: rsshub
+  update_frequency: hourly
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Local RSSHub route must be verified; filter heritage terms after fetch.
+- name: AFP
+  id: AFP
+  url: https://www.afp.com/
+  rss_url: null
+  source_tier: wire_media
+  trust_level: high
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 5
+  fetch_method: rsshub
+  update_frequency: hourly
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Route not verified; RSS-discovery fallback returned unstable/weak results.
+- name: EFE
+  id: EFE
+  url: https://efe.com/
+  rss_url: null
+  source_tier: wire_media
+  trust_level: high
+  language: es
+  country_or_region: global
+  wechat_evidence_count: 10
+  fetch_method: rsshub
+  update_frequency: hourly
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Spanish wire source.
+- name: Heritage Daily
+  id: HeritageDaily
+  url: https://www.heritagedaily.com/
+  rss_url: null
+  source_tier: specialist_media
+  trust_level: medium
+  language: en
+  country_or_region: global
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: false
+  notes: Specialist heritage/archaeology source; current site may return captcha,
+    route needs verification.
+- name: Archaeology Magazine
+  id: ArchaeologyMagazine
+  url: https://www.archaeology.org/news
+  rss_url: https://archaeology.org/category/news/feed/
+  source_tier: specialist_media
+  trust_level: medium
+  language: en
+  country_or_region: us
+  wechat_evidence_count: 3
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Specialist archaeology source; official category feed verified in v0.3.
+- name: Kyiv Post
+  id: KyivPost
+  url: https://www.kyivpost.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: ukraine
+  wechat_evidence_count: 10
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: v0.3 verified through web/RSS-discovery fallback; regional conflict/heritage context.
+- name: Ukrinform
+  id: Ukrinform
+  url: https://www.ukrinform.net/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: ukraine
+  wechat_evidence_count: 6
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Ukraine regional source.
+- name: UNN
+  id: UNN
+  url: https://unn.ua/en
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: ukraine
+  wechat_evidence_count: 4
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Ukraine regional source.
+- name: Interfax-Ukraine
+  id: InterfaxUkraine
+  url: https://en.interfax.com.ua/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: ukraine
+  wechat_evidence_count: 4
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Ukraine regional source.
+- name: Yonhap
+  id: Yonhap
+  url: https://en.yna.co.kr/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: korea
+  wechat_evidence_count: 14
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Korean regional source.
+- name: Kyodo
+  id: Kyodo
+  url: https://english.kyodonews.net/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: japan
+  wechat_evidence_count: 7
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Japanese regional source; fallback returned unstable/weak results.
+- name: NHK
+  id: NHK
+  url: https://www3.nhk.or.jp/nhkworld/en/news/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: japan
+  wechat_evidence_count: 6
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Japanese regional source.
+- name: VietnamPlus
+  id: VietnamPlus
+  url: https://en.vietnamplus.vn/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: vietnam
+  wechat_evidence_count: 5
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: v0.3 verified through web extraction.
+- name: Khmer Times
+  id: KhmerTimes
+  url: https://www.khmertimeskh.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: cambodia
+  wechat_evidence_count: 7
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Cambodia regional source.
+- name: Thai PBS World
+  id: ThaiPBSWorld
+  url: https://www.thaipbsworld.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: thailand
+  wechat_evidence_count: 5
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Thailand regional source.
+- name: Nikkei Asia
+  id: NikkeiAsia
+  url: https://asia.nikkei.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: asia
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Asia regional source.
+- name: Laos Post
+  id: LaosPost
+  url: https://laotiantimes.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: laos
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Laos regional source; fallback returned weak cultural-tourism results.
+- name: Portugal Resident
+  id: PortugalResident
+  url: https://www.portugalresident.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: portugal
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Portugal regional source; fallback returned weak environmental results.
+- name: Libya Observer
+  id: LibyaObserver
+  url: https://libyaobserver.ly/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: libya
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: v0.3 verified through web extraction.
+- name: 3News Ghana
+  id: ThreeNewsGhana
+  url: https://3news.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: ghana
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Ghana regional source.
+- name: WoezorTV
+  id: WoezorTV
+  url: https://woezortv.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: ghana
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Ghana regional source.
+- name: Manila Bulletin
+  id: ManilaBulletin
+  url: https://mb.com.ph/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: philippines
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Philippines regional source.
+- name: Vietnam News
+  id: VietnamNews
+  url: https://vietnamnews.vn/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: vietnam
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Vietnam regional source.
+- name: Malta Today
+  id: MaltaToday
+  url: https://www.maltatoday.com.mt/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: malta
+  wechat_evidence_count: 4
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Malta regional source.
+- name: Greek Reporter
+  id: GreekReporter
+  url: https://greekreporter.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: greece
+  wechat_evidence_count: 4
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: v0.3 verified through web/RSS-discovery fallback.
+- name: PressTV
+  id: PressTV
+  url: https://www.presstv.ir/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: iran
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: true
+  notes: v0.3 verified through web extraction.
+- name: Mehr News
+  id: MehrNews
+  url: https://en.mehrnews.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: iran
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Iran regional source; fallback returned unstable/weak results.
+- name: Assam Tribune
+  id: AssamTribune
+  url: https://assamtribune.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: india
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: India regional source.
+- name: Lokmat Times
+  id: LokmatTimes
+  url: https://www.lokmattimes.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: india
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: India regional source.
+- name: Indian Express
+  id: IndianExpress
+  url: https://indianexpress.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: india
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: India regional source.
+- name: UNESCO Centre du patrimoine mondial - Actualités
+  id: unesco_whc_fr
+  url: https://whc.unesco.org/fr/actualites/
+  rss_url: https://whc.unesco.org/fr/actualites/rss/
+  source_tier: core_official
+  trust_level: high
+  language: fr
+  country_or_region: international
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: ICOMOS France - Actualités
+  id: icomos_fr
+  url: https://www.icomosfrance.fr/
+  rss_url: https://icomosfrance.fr/feed
+  source_tier: core_official
+  trust_level: high
+  language: fr
+  country_or_region: europe
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: UNESCO Patrimoine culturel immatériel
+  id: unesco_ich_fr
+  url: https://ich.unesco.org/fr/actualites
+  rss_url: https://ich.unesco.org/cron_rss.php?flux-rss=news&lang=fr
+  source_tier: core_official
+  trust_level: high
+  language: fr
+  country_or_region: international
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: ARC-WH - Arab Regional Centre for World Heritage
+  id: arc_wh
+  url: https://www.arcwh.org/
+  rss_url: https://www.arcwh.org/feed/
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: arab_states
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: Ecole du Patrimoine Africain / School of African Heritage
+  id: school_of_african_heritage
+  url: https://www.epa-prema.net/
+  rss_url: https://www.epa-prema.net/feed/
+  source_tier: core_official
+  trust_level: high
+  language: fr
+  country_or_region: africa
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: ILAM - Instituto Latinoamericano de Museos
+  id: ilam
+  url: https://www.ilam.org/
+  rss_url: https://ilam.org/feed/
+  source_tier: core_official
+  trust_level: high
+  language: es
+  country_or_region: latin_america_caribbean
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: INAH - Instituto Nacional de Antropología e Historia (Mexico)
+  id: inah_mx
+  url: https://www.inah.gob.mx/
+  rss_url: https://www.inah.gob.mx/?format=feed&type=rss
+  source_tier: core_official
+  trust_level: high
+  language: es
+  country_or_region: latin_america_caribbean
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: SAHRA - South African Heritage Resources Agency
+  id: sahra_south_africa
+  url: https://www.sahra.org.za/
+  rss_url: https://www.sahra.org.za/feed/
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: africa
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: National Museums of Kenya
+  id: nmk_kenya
+  url: https://www.museums.or.ke/
+  rss_url: https://museums.or.ke/feed/
+  source_tier: core_official
+  trust_level: high
+  language: en
+  country_or_region: africa
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
+- name: International Journal of Heritage Studies
+  id: ijhs
+  url: https://www.tandfonline.com/toc/rjhs20/current
+  rss_url: https://www.tandfonline.com/action/showFeed?type=etoc&feed=rss&jc=rjhs20
+  source_tier: specialist_media
+  trust_level: medium
+  language: en
+  country_or_region: international
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: 'Imported from v0.2 verified RSS source. v0.3: dry-run returned no parsable
+    articles; keep out of stable batch.'
+- name: Heritage Science
+  id: heritage_science
+  url: https://heritagesciencejournal.springeropen.com/
+  rss_url: https://www.nature.com/npjheritagesci.rss
+  source_tier: specialist_media
+  trust_level: medium
+  language: en
+  country_or_region: international
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: 'Imported from v0.2 verified RSS source. v0.3: dry-run returned no parsable
+    articles; keep out of stable batch.'
+- name: APT Bulletin - The Journal of Preservation Technology
+  id: apt_bulletin
+  url: https://www.apti.org/apt-bulletin
+  rss_url: https://www.apti.org/feed/rss2
+  source_tier: specialist_media
+  trust_level: medium
+  language: en
+  country_or_region: international
+  wechat_evidence_count: 0
+  fetch_method: rss
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-06-30'
+  rsshub_needed: false
+  notes: Imported from v0.2 verified RSS source.
