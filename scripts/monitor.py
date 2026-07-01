@@ -9,8 +9,9 @@ from common import connect, init_db
 def main() -> None:
     parser = argparse.ArgumentParser(description="Heritage News source health monitor")
     parser.add_argument("--check-health", action="store_true")
+    parser.add_argument("--check-last-fetch", action="store_true")
     args = parser.parse_args()
-    if not args.check_health:
+    if not args.check_health and not args.check_last_fetch:
         parser.print_help()
         return
     conn = connect()
