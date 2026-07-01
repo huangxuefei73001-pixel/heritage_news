@@ -26,7 +26,7 @@ SCHEMA_PATH = PROJECT_ROOT / "database" / "schema.sql"
 CANDIDATES_PATH = PROJECT_ROOT / "sources" / "candidate_sources_from_wechat.yaml"
 
 HERITAGE_TERMS = (
-    "heritage", "unesco", "icomos", "iccrom", "iucn", "museum", "archaeolog",
+    "heritage", "unesco", "icomos", "iccrom", "iucn", "museum", "archaeology", "archaeologist", "archaeologists",
     "world heritage", "patrimoine", "patrimonio", "monument",
     "restitution", "looted", "artifact", "artefact", "hia", "buffer zone",
     "outstanding universal value", "ouv", "reactive monitoring", "danger list",
