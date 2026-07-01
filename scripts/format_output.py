@@ -51,6 +51,9 @@ def key_points(item: sqlite3.Row) -> list[str]:
     ]
     if item["summary_zh"]:
         points.insert(0, item["summary_zh"][:120])
+    title = item["title_original"].lower()
+    if "angkor archaeological park introduces" in title:
+        points.insert(0, "关联线索：同日还抓到暹粒精品遗产度假项目、数字遗产保护合作等动态，应合并观察为“吴哥遗产地周边开发与管理压力”。")
     return points[:5]
 
 
@@ -68,12 +71,24 @@ def format_item(item: sqlite3.Row) -> str:
         "",
     ]
     body += [f"🔹 {point}" for point in key_points(item)]
-    body += ["", "⭐ 值得关注", generate_deep_analysis(dict(item))]
+    body += ["", "新闻解读", generate_deep_analysis(dict(item))]
     return "\n".join(body)
 
 
 def canonical_key(row: sqlite3.Row) -> str:
     url = row["url"]
+    title = row["title_original"].lower()
+    if row["source_name"] == "Siem Reap Times" and any(
+        x in title
+        for x in [
+            "angkor archaeological park introduces",
+            "national museum of cambodia launches digital heritage",
+            "international hotel groups expand luxury heritage projects",
+            "cambodia expands heritage protection measures at angkor",
+            "siem reap introduces new heritage management standards",
+        ]
+    ):
+        return "siem-reap-angkor-management"
     if "whc.unesco.org" in url:
         import re
 
@@ -130,7 +145,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Format heritage news as structured Chinese push output")
     parser.add_argument("--date", default=datetime.now(timezone.utc).date().isoformat())
     parser.add_argument("--days", type=int, default=0)
-    parser.add_argument("--limit", type=int, default=20)
+    parser.add_argument("--limit", type=int, default=15)
     parser.add_argument("--per-source-limit", type=int, default=3)
     args = parser.parse_args()
 
