@@ -37,6 +37,34 @@ def report(kind: str, date: str, limit: int) -> str:
     )
 
 
+def chunks(text: str, size: int = 3000) -> list[str]:
+    parts, current = [], []
+    for line in text.splitlines():
+        if len(line.encode("utf-8")) > size:
+            if current:
+                parts.append("\n".join(current))
+                current = []
+            buf = ""
+            for char in line:
+                if buf and len((buf + char).encode("utf-8")) > size:
+                    parts.append(buf)
+                    buf = char
+                else:
+                    buf += char
+            if buf:
+                parts.append(buf)
+            continue
+        candidate = "\n".join(current + [line])
+        if current and len(candidate.encode("utf-8")) > size:
+            parts.append("\n".join(current))
+            current = [line]
+        else:
+            current.append(line)
+    if current:
+        parts.append("\n".join(current))
+    return parts
+
+
 def send_markdown(webhook: str, text: str) -> None:
     payload = json.dumps({"msgtype": "markdown", "markdown": {"content": text}}, ensure_ascii=False).encode()
     req = urllib.request.Request(webhook, data=payload, headers={"Content-Type": "application/json"})
@@ -62,7 +90,10 @@ def main() -> None:
     webhook = env("WECOM_WEBHOOK_URL")
     if not webhook:
         raise SystemExit("Missing WECOM_WEBHOOK_URL")
-    send_markdown(webhook, text[:19000])
+    parts = chunks(text)
+    for index, part in enumerate(parts, 1):
+        prefix = f"({index}/{len(parts)})\n" if len(parts) > 1 else ""
+        send_markdown(webhook, prefix + part)
 
 
 if __name__ == "__main__":
