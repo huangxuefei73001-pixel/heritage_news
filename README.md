@@ -14,7 +14,6 @@ This skill turns those scattered updates into a research-ready workflow:
 - multilingual heritage news collection
 - local SQLite evidence cache
 - source health monitoring
-- Chinese user-facing outputs
 - issue framing: event -> issue -> mechanism -> comparison -> research/work lead
 
 ## Core Value
@@ -35,11 +34,10 @@ It does not cite WeChat or secondary digests as news sources. User-facing output
 
 ## Example Questions
 
-- `过去3天世界遗产新闻推送`
-- `最近一周，亚太地区有什么 heritage 新闻？`
-- `我想看到最近七天有关活态遗产的新闻`
-- `只看 UNESCO / IUCN / ICOMOS 官方消息`
-- `总结6月份的 heritage 新闻，文化和自然都要有`
+
+- `let me knwo what happened in the past week`
+- `推送过去7天的世界遗产新闻周报`
+
 
 ## Main Commands
 
