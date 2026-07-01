@@ -859,3 +859,108 @@ sources:
   last_verified: '2026-06-30'
   rsshub_needed: false
   notes: Imported from v0.2 verified RSS source.
+- name: Korea Herald
+  id: KoreaHerald
+  url: https://www.koreaherald.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: korea
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: fetchable
+  last_verified: '2026-07-01'
+  rsshub_needed: false
+  notes: Priority source for Korea heritage disputes; web parser verified on 2026-07-01.
+- name: Manila Times
+  id: ManilaTimes
+  url: https://www.manilatimes.net/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: philippines
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: fetchable
+  last_verified: '2026-07-01'
+  rsshub_needed: false
+  notes: Priority source for Banaue terraces and living heritage governance; web parser verified on 2026-07-01.
+- name: Siem Reap Times
+  id: SiemReapTimes
+  url: https://siemreaptimes.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: cambodia
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: fetchable
+  last_verified: '2026-07-01'
+  rsshub_needed: false
+  notes: Priority source for Angkor visitor management and overtourism; web parser verified on 2026-07-01.
+- name: Oman News Agency
+  id: OmanNewsAgency
+  url: https://omannews.gov.om/
+  rss_url: null
+  source_tier: wire_media
+  trust_level: high
+  language: en
+  country_or_region: oman
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Priority source for Gulf heritage diplomacy; homepage verification passed but no heritage articles parsed on 2026-07-01, needs search/RSSHub route.
+- name: WAFA
+  id: WAFA
+  url: https://english.wafa.ps/
+  rss_url: null
+  source_tier: wire_media
+  trust_level: high
+  language: en
+  country_or_region: palestine
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Priority source for occupied-territory heritage sovereignty; homepage verification passed but no heritage articles parsed on 2026-07-01, needs search/RSSHub route.
+- name: The Paper
+  id: ThePaper
+  url: https://www.thepaper.cn/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Priority domestic source for transparent heritage-governance reporting; homepage verification passed but no heritage articles parsed on 2026-07-01, needs search/RSSHub route.
+- name: Shangguan News
+  id: ShangguanNews
+  url: https://www.shobserver.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: candidate
+  last_verified: null
+  rsshub_needed: true
+  notes: Priority domestic source for local heritage governance and reporting; homepage verification passed but no heritage articles parsed on 2026-07-01, needs search/RSSHub route.
