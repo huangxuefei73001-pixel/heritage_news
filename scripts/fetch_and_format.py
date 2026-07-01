@@ -13,7 +13,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Fetch verified sources and print enhanced heritage digest")
     parser.add_argument("--date", required=True)
     parser.add_argument("--format", default="enhanced")
-    parser.add_argument("--limit", type=int, default=30)
+    parser.add_argument("--limit", type=int, default=15)
     args = parser.parse_args()
 
     subprocess.run([sys.executable, "scripts/fetch.py", "--all", "--update-db", "--force"], cwd=ROOT, check=False)
