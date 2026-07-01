@@ -28,9 +28,24 @@ CANDIDATES_PATH = PROJECT_ROOT / "sources" / "candidate_sources_from_wechat.yaml
 HERITAGE_TERMS = (
     "heritage", "unesco", "icomos", "iccrom", "iucn", "museum", "archaeolog",
     "world heritage", "patrimoine", "patrimonio", "monument",
-    "restitution", "looted", "artifact", "artefact", "文化遗产", "世界遗产", "文物", "考古",
-    "博物馆", "遗产",
+    "restitution", "looted", "artifact", "artefact", "hia", "buffer zone",
+    "outstanding universal value", "ouv", "reactive monitoring", "danger list",
+    "tentative list", "nomination", "inscription", "jongmyo", "banaue", "angkor",
+    "sebastia", "文化遗产", "世界遗产", "文物", "考古", "博物馆", "遗产", "申遗",
+    "濒危名录", "缓冲区", "突出普遍价值", "宗庙", "巴纳韦", "吴哥", "塞巴斯蒂亚",
 )
+
+
+def has_heritage_term(text: str) -> bool:
+    haystack = text.lower()
+    for term in HERITAGE_TERMS:
+        needle = term.lower()
+        if needle.isascii():
+            if re.search(rf"(?<![a-z0-9]){re.escape(needle)}(?![a-z0-9])", haystack):
+                return True
+        elif needle in haystack:
+            return True
+    return False
 
 
 def utcnow() -> str:
@@ -123,7 +138,7 @@ def parse_rss(xml_text: str, source: dict) -> list[dict]:
         pub_date = text("pubDate") or text("updated") or text("published")
         if title and link:
             haystack = f"{title} {summary} {link}".lower()
-            if source.get("source_tier") in {"wire_media", "regional_media"} and not any(term in haystack for term in HERITAGE_TERMS):
+            if source.get("source_tier") in {"wire_media", "regional_media"} and not has_heritage_term(haystack):
                 continue
             rows.append(article_from_source(source, title, link, pub_date, strip_html(summary), {"feed": True}))
     return rows
@@ -215,7 +230,7 @@ def parse_strict_web(html: str, source: dict, patterns: list[str], base_url: str
         if url in seen or not any(p.search(url) for p in compiled):
             continue
         haystack = f"{title} {url}".lower()
-        if require_terms and not any(term in haystack for term in HERITAGE_TERMS):
+        if require_terms and not has_heritage_term(haystack):
             continue
         seen.add(url)
         pub_date = article_date_from_text(anchor_text, url)
@@ -265,10 +280,10 @@ def parse_web(html: str, source: dict) -> list[dict]:
         if title.strip().lower() in nav_words:
             continue
         specialist = source.get("source_tier") == "specialist_media"
-        if not specialist and not any(term in haystack for term in HERITAGE_TERMS):
+        if not specialist and not has_heritage_term(haystack):
             continue
-        if href.startswith("/"):
-            href = source["url"].rstrip("/") + href
+        if not href.startswith(("http://", "https://")):
+            href = absolute_url(source["url"], href)
         if href in seen:
             continue
         seen.add(href)
