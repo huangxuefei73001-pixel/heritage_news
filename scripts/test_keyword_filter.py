@@ -6,7 +6,7 @@ import json
 
 import re
 
-from common import HERITAGE_TERMS, has_heritage_term
+from common import HERITAGE_TERMS, UNESCO_DATA_TERMS, has_heritage_term
 
 
 def main() -> None:
@@ -15,7 +15,7 @@ def main() -> None:
     args = parser.parse_args()
     text = args.sample.lower()
     hits = []
-    for term in HERITAGE_TERMS:
+    for term in HERITAGE_TERMS + UNESCO_DATA_TERMS:
         needle = term.lower()
         if needle.isascii():
             matched = re.search(rf"(?<![a-z0-9]){re.escape(needle)}(?![a-z0-9])", text)
