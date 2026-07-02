@@ -25,6 +25,16 @@ def classify(title: str) -> tuple[str, list[str]]:
 def fallback_analysis(item: dict) -> str:
     title = item["title_original"]
     text = title.lower()
+    if any(x in text for x in ["vegetation cleanup", "clearance", "clean-up", "stabilization", "site protection", "植被清理", "清理", "加固"]):
+        return "这条新闻的重点不只是一次现场作业，而是遗产地日常维护能力是否制度化。蒲甘这类大尺度遗产区的植被清理、通道维护和分区管理，会直接影响遗址可见性、结构安全和游客行为。它对其他遗产地的启示是：保护不是只在灾害或申遗节点发生，持续、低调、可记录的日常操作，才是入遗后管理可信度的基础。"
+    if any(x in text for x in ["climate change", "global warming", "sea level rise", "气候变化", "全球变暖", "海平面上升"]):
+        return "这条新闻把文化遗产放进气候风险框架中，价值不在于提醒“遗产会受威胁”，而在于把威胁转化为可监测、可比较、可优先排序的问题。机制上，气候研究能帮助遗产工作从灾后修复转向预防性保护。对海岸、干旱、冻融或极端天气敏感的遗产地而言，未来竞争力将越来越取决于风险数据和适应性管理方案。"
+    if any(x in text for x in ["documentation", "documenting", "documented", "3d scanning", "database", "maldives", "atolls", "文档化", "记录", "数字化"]):
+        return "这条新闻的本质是把分散遗产资源转化为可管理的数据资产。对马尔代夫这类岛屿国家而言，文档化不仅服务展示，更关系到气候风险、空间规划、后续修复和国际援助。它对其他国家的意义在于：遗产保护的第一步常常不是宏大叙事，而是把对象、位置、状态、责任主体和风险证据稳定记录下来。"
+    if any(x in text for x in ["exhibition", "photo exhibition", "expo", "cultural exchange", "dunhuang", "beijing central axis", "展览", "特展", "开幕", "文化交流", "敦煌", "北京中轴线"]):
+        return "这条新闻值得关注，因为展览不是外围宣传，而是遗产价值被重新组织、翻译和传播的机制。北京中轴线、敦煌等案例通过展陈进入国际交流或城市公共文化空间，会影响公众理解、地方品牌和后续保护支持。对遗产工作而言，关键不是办了多少展，而是展览能否把研究证据、保护议题和当代受众连接起来。"
+    if any(x in text for x in ["stewardship", "guardianship", "goguryeo", "koguryo", "守护", "传承", "高句丽"]):
+        return "这条新闻的意义在于把遗产保护从项目制工作拉回长期地方守护。高句丽这类跨历史、跨地域叙事的遗产，真正的保护力来自持续研究、公众教育、地方机构协作和代际传承。对其他成熟遗产地而言，它提示我们：入遗后的价值维护不是静态保存，而是让地方社会不断理解、讲述并参与这套遗产叙事。"
     if any(x in text for x in ["creative products", "apec", "文创"]):
         return "这条新闻的本质是博物馆从收藏展示机构变成文化交流和旅游消费的接口。机制上，文创产品能扩大遗产传播，但也会带来符号简化和商业目标压过研究阐释的风险。对其他城市和遗产地而言，关键不是多做商品，而是把文创放回知识生产、公共教育和地方品牌治理中，形成可解释而非只可销售的遗产表达。"
     if any(x in text for x in ["angkor", "visitor", "hotel", "tourism", "吴哥", "游客", "旅游"]):

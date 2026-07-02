@@ -45,15 +45,54 @@ UNESCO_DATA_TERMS = (
     "遗产支出",
 )
 
+HERITAGE_SITE_TERMS = (
+    "bagan", "pagan", "angkor", "jongmyo", "dunhuang", "goguryeo", "koguryo",
+    "beijing central axis", "central axis of beijing", "banaue", "dak nong", "sebastia",
+    "petra", "samaipata", "notre-dame", "pic du midi", "jodrell bank",
+    "蒲甘", "吴哥", "宗庙", "敦煌", "莫高窟", "高句丽", "北京中轴线",
+    "巴纳韦", "塞巴斯蒂亚", "萨迈帕塔", "佩特拉",
+)
+
+HERITAGE_TYPE_TERMS = (
+    "archaeological", "archaeology", "cultural heritage", "natural heritage",
+    "intangible heritage", "underwater heritage", "heritage site", "historic site",
+    "monument", "museum", "artifact", "artefact", "relic", "geopark", "biosphere reserve",
+    "考古", "文物", "非遗", "文化遗产", "自然遗产", "古迹", "遗址", "遗产地",
+    "博物馆", "馆藏", "地质公园", "生物圈保护区",
+)
+
+HERITAGE_ACTION_TERMS = (
+    "restoration", "preservation", "conservation", "cleanup", "clean-up", "clearance",
+    "vegetation cleanup", "stabilization", "documentation", "documenting", "documented",
+    "digitization", "digital preservation", "3d scanning", "exhibition", "expo",
+    "cultural exchange", "stewardship", "community", "climate change", "global warming",
+    "sea level rise", "funding", "budget", "investment", "protection", "safeguarding",
+    "修复", "保护", "清理", "植被清理", "加固", "文档化", "记录", "数字化",
+    "展览", "特展", "开幕", "文化交流", "守护", "传承", "社区", "气候变化",
+    "全球变暖", "海平面上升", "资金", "投入", "拨款",
+)
+
+
+def term_matches(text: str, term: str) -> bool:
+    needle = term.lower()
+    if needle.isascii():
+        return bool(re.search(rf"(?<![a-z0-9]){re.escape(needle)}(?![a-z0-9])", text))
+    return needle in text
+
 
 def has_heritage_term(text: str) -> bool:
     haystack = text.lower()
     for term in HERITAGE_TERMS + UNESCO_DATA_TERMS:
-        needle = term.lower()
-        if needle.isascii():
-            if re.search(rf"(?<![a-z0-9]){re.escape(needle)}(?![a-z0-9])", haystack):
-                return True
-        elif needle in haystack:
+        if term_matches(haystack, term):
+            return True
+    if any(term_matches(haystack, term) for term in HERITAGE_SITE_TERMS):
+        return True
+    has_type = any(term_matches(haystack, term) for term in HERITAGE_TYPE_TERMS)
+    has_action = any(term_matches(haystack, term) for term in HERITAGE_ACTION_TERMS)
+    if has_type and has_action:
+        return True
+    for action in ("climate change", "global warming", "sea level rise", "气候变化", "全球变暖", "海平面上升"):
+        if term_matches(haystack, action) and any(term_matches(haystack, t) for t in ("heritage", "site", "文化遗产", "遗产地")):
             return True
     return False
 
@@ -187,9 +226,11 @@ def discover_feed(source: dict) -> str | None:
 def article_date_from_url(url: str) -> str:
     if m := re.search(r"/a/(20\d{2})(\d{2})/(\d{2})/", url):
         return f"{m.group(1)}-{m.group(2)}-{m.group(3)}T00:00:00+00:00"
+    if m := re.search(r"/(20\d{2})/(\d{1,2})-(\d{1,2})/", url):
+        return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}T00:00:00+00:00"
     if m := re.search(r"/(20\d{2})/(\d{1,2})/(\d{1,2})/", url):
         return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}T00:00:00+00:00"
-    if m := re.search(r"/(20\d{2})(\d{2})(\d{2})/", url):
+    if m := re.search(r"(?<!\d)(20\d{2})(\d{2})(\d{2})(?!\d)", url):
         return f"{m.group(1)}-{m.group(2)}-{m.group(3)}T00:00:00+00:00"
     return utcnow()
 
@@ -283,7 +324,7 @@ def parse_web(html: str, source: dict) -> list[dict]:
     rows, seen = [], set()
     nav_words = {"home", "about", "contact", "privacy", "advertise", "subscribe", "newsletter"}
     for m in re.finditer(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', html, re.I | re.S):
-        href, title = m.group(1), strip_html(m.group(2))
+        href, title = m.group(1), clean_anchor_title(m.group(2))
         if not title or len(title) < 12:
             continue
         haystack = f"{title} {href}".lower()
@@ -297,7 +338,15 @@ def parse_web(html: str, source: dict) -> list[dict]:
         if href in seen:
             continue
         seen.add(href)
-        rows.append(article_from_source(source, title, href, article_date_from_url(href), "", {"web": True}))
+        pub_date = article_date_from_url(href)
+        if sid in {"ChinaJilin", "YCWB", "MDN", "PSMNews"}:
+            try:
+                article_html = fetch_text(href, timeout=10, retries=1)
+                article_text = BeautifulSoup(article_html, "html.parser").get_text(" ", strip=True)
+                pub_date = article_date_from_text(article_text, href)
+            except Exception:
+                pass
+        rows.append(article_from_source(source, title, href, pub_date, "", {"web": True}))
     return rows[:20]
 
 

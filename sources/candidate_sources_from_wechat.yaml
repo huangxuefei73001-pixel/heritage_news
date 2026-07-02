@@ -213,7 +213,7 @@ sources:
   notes: China English-language wire/media source; v0.3 uses official culture page with heritage-term filtering.
 - name: 中国新闻网
   id: Chinanews
-  url: https://www.chinanews.com.cn/cul/
+  url: https://www.chinanews.com.cn/wy/
   rss_url: null
   source_tier: wire_media
   trust_level: high
@@ -222,10 +222,85 @@ sources:
   wechat_evidence_count: 42
   fetch_method: web
   update_frequency: hourly
-  integration_status: candidate
-  last_verified: null
+  integration_status: verified
+  last_verified: '2026-07-02'
   rsshub_needed: true
-  notes: High WeChat evidence; verify feed/route.
+  notes: High WeChat evidence; national wire source for local heritage, exhibitions, archaeology and cultural exchange. /cul/ redirects to /wy/; web extraction parsed Dunhuang and museum articles on 2026-07-02.
+- name: Myanmar Digital News
+  id: MDN
+  url: https://www.mdn.gov.mm/en/local-culture-travel
+  rss_url: null
+  source_tier: wire_media
+  trust_level: medium
+  language: en
+  country_or_region: myanmar
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-07-02'
+  rsshub_needed: true
+  notes: Priority source for Bagan and Myanmar heritage-site operations, including vegetation clearance and site maintenance. Culture & Travel page parsed Bagan heritage articles on 2026-07-02; no RSS discovered.
+- name: PSM News
+  id: PSMNews
+  url: https://psmnews.mv/en
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: en
+  country_or_region: maldives
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-07-02'
+  rsshub_needed: true
+  notes: Priority source for Maldives heritage documentation, climate risk and small-island cultural heritage coverage. Homepage verification parsed heritage-relevant articles on 2026-07-02; needs ongoing health monitoring.
+- name: 中国青年网
+  id: YouthCN
+  url: https://www.youth.cn/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-07-02'
+  rsshub_needed: true
+  notes: Domestic source for climate research, science communication and heritage-related public-interest reporting. Homepage verification parsed heritage-relevant articles on 2026-07-02.
+- name: 中国吉林网
+  id: ChinaJilin
+  url: https://www.cnjiwang.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-07-02'
+  rsshub_needed: true
+  notes: Regional source for Goguryeo heritage, local stewardship and northeast China heritage governance. Homepage verification parsed heritage-relevant articles on 2026-07-02.
+- name: 羊城晚报
+  id: YCWB
+  url: https://www.ycwb.com/
+  rss_url: null
+  source_tier: regional_media
+  trust_level: medium
+  language: zh
+  country_or_region: china
+  wechat_evidence_count: 3
+  fetch_method: web
+  update_frequency: daily
+  integration_status: verified
+  last_verified: '2026-07-02'
+  rsshub_needed: true
+  notes: Regional source for cultural heritage exhibitions, museums and South China heritage reporting; useful for Dunhuang touring exhibitions and cultural exchange. Homepage verification parsed heritage-relevant articles on 2026-07-02.
 - name: Reuters Heritage
   id: Reuters
   url: https://www.reuters.com/
