@@ -35,10 +35,20 @@ HERITAGE_TERMS = (
     "濒危名录", "缓冲区", "突出普遍价值", "宗庙", "巴纳韦", "吴哥", "塞巴斯蒂亚",
 )
 
+UNESCO_DATA_TERMS = (
+    "cultural and natural heritage", "intangible cultural heritage", "underwater cultural heritage",
+    "memory of the world", "unesco global geopark", "biosphere reserve", "cultural statistics",
+    "cultural participation", "cultural employment", "creative economy", "cultural goods",
+    "cultural industries", "heritage expenditure", "sdg 11.4.1",
+    "文化和自然遗产", "非物质文化遗产", "水下文化遗产", "世界记忆", "联合国教科文组织世界地质公园",
+    "生物圈保护区", "文化统计", "文化参与", "文化就业", "创意经济", "文化产品", "文化产业",
+    "遗产支出",
+)
+
 
 def has_heritage_term(text: str) -> bool:
     haystack = text.lower()
-    for term in HERITAGE_TERMS:
+    for term in HERITAGE_TERMS + UNESCO_DATA_TERMS:
         needle = term.lower()
         if needle.isascii():
             if re.search(rf"(?<![a-z0-9]){re.escape(needle)}(?![a-z0-9])", haystack):
